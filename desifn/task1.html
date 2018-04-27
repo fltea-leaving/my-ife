@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    p {
+      color: blue;
+      display: inline-block;
+      position: relative;
+    }
+
+    p::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      height: 1px;
+      width: 0;
+      transform: translateX( -50%);
+      transition: width 2s;
+      background: blue;
+    }
+
+    p.line::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p id="test">前端学院</p>
+  </div>
+  <button onclick="chageClass()">修改样式</button>
+  <hr>
+
+  <script>
+    function chageClass(el) {
+      var cls = document.getElementById('test').className;
+      if (cls.length > 0) {
+        document.getElementById('test').className = '';
+      } else {
+        document.getElementById('test').className = 'line';
+      }
+
+    }
+  </script>
+</body>
+
+</html>
