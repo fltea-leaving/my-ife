@@ -12,6 +12,36 @@
   <!-- 
     HTML 超文本标记语言而非编程语言，是一套标记标签
          定义网页内容
+    HTML元素 开始标签到结束标签之间的所有代码
+    html 标签语义化： 
+      1. 搜索引擎使用标题为网页的结构和内容编制索引
+      2. 基于内容的标签赋予含义
+      3. 语义元素清楚地向浏览器和开发者描述其意义。
+      
+        HTML5 语义元素
+        header	定义文档或节的页眉
+        nav	定义导航链接的容器
+        section	定义文档中的节
+        article	定义独立的自包含文章
+        aside	定义内容之外的内容（比如侧栏）
+        footer	定义文档或节的页脚
+        details	定义额外的细节
+        summary	定义 details 元素的标题
+    html
+    head
+    body
+    h1 - h6
+    p
+    a
+      锚点只能连接到a
+    img
+    空元素： 没有内容的HTML元素 
+    br
+    hr
+    注释
+      条件注释 IE执行
+    浏览器输出
+      当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。
    -->
   <h1>简历</h1>
   <p>姓名：粟靖文</p>
@@ -19,6 +49,368 @@
   <p>邮箱：ximishiwo@foxmail.com</p>
   <p>学历：本科</p>
 
+  <!-- map -->
+  <img src="http://www.w3school.com.cn/i/eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+
+  <map name="planetmap" id="planetmap">
+
+    <area shape="circle" coords="180,139,14" href="/example/html/venus.html" target="_blank" alt="Venus" />
+
+    <area shape="circle" coords="129,161,10" href="/example/html/mercur.html" target="_blank" alt="Mercury" />
+
+    <area shape="rect" coords="0,0,110,260" href="/example/html/sun.html" target="_blank" alt="Sun" />
+
+  </map>
+
+  <!-- table 
+        border cellpadding cellspacing frame(box/above/below/hsides/vsides)
+    caption
+    thead
+    th
+    tr
+    td
+    tbody
+    tfoot
+    col  没什么用
+    colgroup 没用
+  -->
+
+  <!-- 列表
+    ul 
+    ol
+    dl
+      dt
+      dd
+  -->
+
+  <!-- 
+    页面框架
+    frameset (不能与body同时使用)
+    frame
+    
+    iframe
+   -->
+
+  <!-- 
+     head
+     title
+     base
+     meta
+     link
+     script
+     style
+    -->
+
+  <!-- XHTML 标签都要关闭，正确嵌套，使用小写,属性要用引号，不可缩写省略 -->
+  <!-- 
+    form 表单
+    input 属性： partern required value readonly disabled size maxlength autocomplete autofocus form formaction formmethod formnovalidate formtarget height width list min max multiple pattern placeholder step 
+      text
+      password
+      submit
+      radio
+      checkbox
+      button
+      color
+      date
+      datetime   Chrome、Firefox 或 Internet Explorer 不支持
+      datetime-local   Firefox 或者 Internet Explorer 不支持 
+      email
+      month
+      number
+      range
+      search
+      tel    Safari 8 及更新版本支持
+      time
+      url   IE9 及其更早版本不支持
+      week
+      number
+    select
+    textarea
+    button
+    datalist
+
+
+    fieldset 
+      legend
+    
+
+    GET  被动的提交，没用敏感信息，少量数据提交
+    POST 表单更新数据，敏感信息，地址栏看不见
+   -->
+  <!-- 
+
+    HTML5 最新的HTML标准，新的语义，图形及多媒体 提供新元素和新的API 跨平台
+    header footer article section aside nav main article figure
+    canvas svg 
+    video audio
+    本地存储
+
+    自动把未识别元素当做行内元
+  -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <!-- 
+
+      canvas 
+        getContext("2d");
+        fillStyle
+        fillRect
+        moveTo
+        lineTo
+        stroke
+        beginPath
+        arc
+        closePath
+        fill
+        createLinearGradient   addColorStop    
+        drawImage
+     -->
+
+  <!-- 
+       HTML 5 
+        媒体  object  param/embed(HTML 4 无效)
+            使用 Windows Media Player
+                <object width="100%" height="100%"
+                type="video/x-ms-asf" url="3d.wmv" data="3d.wmv"
+                classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6">
+                <param name="url" value="3d.wmv">
+                <param name="filename" value="3d.wmv">
+                <param name="autostart" value="1">
+                <param name="uiMode" value="full" />
+                <param name="autosize" value="1">
+                <param name="playcount" value="1">
+                <embed type="application/x-mplayer2" src="3d.wmv" width="100%"
+                height="100%" autostart="true" showcontrols="true" 
+                pluginspage="http://www.microsoft.com/Windows/MediaPlayer/"></embed>
+                </object>
+           audio source 
+              雅虎媒体播放器  <script type="text/javascript" src="http://mediaplayer.yahoo.com/js">
+              使用超链接 <a href="song.mp3">Play the sound</a>
+           video source
+               HTML 5 + <object> + <embed>
+      -->
+
+  <!-- 
+        HTML5 地理定位
+          Internet Explorer 9、Firefox、Chrome、Safari 以及 Opera 支持地理定位
+          
+          <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+          <script> //返回用户位置的经度和纬度
+            var x=document.getElementById("demo");
+            function getLocation()
+              {
+              if (navigator.geolocation)
+                {
+                navigator.geolocation.getCurrentPosition(showPosition,showError); // 第二个参数是错误处理
+                }
+              else{x.innerHTML="Geolocation is not supported by this browser.";}
+              }
+            function showPosition(position)
+              {
+              x.innerHTML="Latitude: " + position.coords.latitude +
+              "<br />Longitude: " + position.coords.longitude;
+                lat=position.coords.latitude;
+                lon=position.coords.longitude;
+                latlon=new google.maps.LatLng(lat, lon)
+                mapholder=document.getElementById('mapholder')
+                mapholder.style.height='250px';
+                mapholder.style.width='500px';
+
+                var myOptions={
+                center:latlon,zoom:14,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+                mapTypeControl:false,
+                navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+                };
+                var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+                var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+              }
+              function showError(error)
+              {
+              switch(error.code)
+                {
+                case error.PERMISSION_DENIED:
+                  x.innerHTML="User denied the request for Geolocation."
+                  break;
+                case error.POSITION_UNAVAILABLE:
+                  x.innerHTML="Location information is unavailable."
+                  break;
+                case error.TIMEOUT:
+                  x.innerHTML="The request to get user location timed out."
+                  break;
+                case error.UNKNOWN_ERROR:
+                  x.innerHTML="An unknown error occurred."
+                  break;
+                }
+              }
+          </script>
+
+    watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置（就像汽车上的 GPS）。
+    clearWatch() - 停止 watchPosition() 方法
+       -->
+
+  <!-- 
+         HTML 拖放
+         <img draggable="true">
+
+         function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+          }
+
+         拖到何处 - ondragover
+          ondragover 事件规定被拖动的数据能够被放置到何处。
+
+          默认地，数据/元素无法被放置到其他元素中。为了实现拖放，我们必须阻止元素的这种默认的处理方式。
+
+          这个任务由 ondragover 事件的 event.preventDefault() 方法完成：
+
+          event.preventDefault() 
+
+          function drop(ev) {
+              ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+          }
+        -->
+
+  <!-- 
+          HTML 本地存储
+          优于 cookies
+          与 cookie 不同，存储限制要大得多（至少5MB），并且信息不会被传输到服务器
+
+          window.localStorage - 存储没有截止日期的数据
+          window.sessionStorage - 针对一个 session 来存储数据（当关闭浏览器标签页时数据会丢失）
+
+          if (typeof(Storage) !== "undefined") {
+              // 针对 localStorage/sessionStorage 的代码
+          } else {
+              // 抱歉！不支持 Web Storage ..
+          }
+
+          setItem()
+          getItem()
+          removeItem()
+         -->
+
+  <!-- 
+      HTML5 应用程序缓存
+           使用应用程序缓存，通过创建 cache manifest 文件，可轻松创建 web 应用的离线版本。
+            离线浏览 - 用户可在应用离线时使用它们
+            速度 - 已缓存资源加载得更快
+            减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源
+
+      <!DOCTYPE HTML>
+      <html manifest="demo.appcache">
+
+      <body>
+      文档内容 ......
+      </body>
+
+      </html>
+
+      CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存
+      NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存
+      FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）
+      
+      demo.appcache
+        CACHE MANIFEST
+        # 2012-02-21 v1.0.0  //以 "#" 开头的是注释行，但也可满足其他用途。应用的缓存只会在其 manifest 文件改变时被更新。如果您编辑了一幅图像，或者修改了一个 JavaScript 函数，这些改变都不会被重新缓存。更新注释行中的日期和版本号是一种使浏览器重新缓存文件的办法。
+        /theme.css
+        /logo.gif
+        /main.js
+        NETWORK:
+        login.asp
+        NETWORK:
+        *
+        FALLBACK
+        FALLBACK:
+        /html/ /offline.html
+        第一个 URI 是资源，第二个是替补。
+
+      浏览器对缓存数据的容量限制可能不太一样（某些浏览器的限制是每个站点 5MB）。
+          -->
+
+  <!-- 
+            什么是 Web Worker？
+            当在 HTML 页面中执行脚本时，页面是不可响应的，直到脚本已完成。
+            Web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 运行在后台。
+
+            if (typeof(Worker) !== "undefined") {
+                // 是的！支持 Web worker！
+                // 一些代码.....
+            } else {
+                // 抱歉！不支持 Web Worker！
+            }
+
+            demo_workers.js
+            var i = 0;
+
+            function timedCount() {
+                i = i + 1;
+                postMessage(i);
+                setTimeout("timedCount()",500);
+            }
+
+            timedCount();
+
+            /////////////////////////调用
+            if (typeof(w) == "undefined") {
+                w = new Worker("demo_workers.js");
+            }
+
+            //监听
+            w.onmessage = function(event){
+                document.getElementById("result").innerHTML = event.data;
+            };
+
+            //停止
+            w.terminate();
+
+            //复用
+            w = undefined;
+
+            Web Worker 和 DOM
+            由于 web worker 位于外部文件中，它们无法访问下例 JavaScript 对象：
+
+            window 对象
+            document 对象
+            parent 对象
+           -->
+
+  <!-- 
+    HTML Server-Sent 事件
+      Server-Sent 事件指的是网页自动从服务器获得更新。
+
+      以前也可能做到这一点，前提是网页不得不询问是否有可用的更新。通过 Server-Sent 事件，更新能够自动到达。
+
+      例如：Facebook/Twitter 更新、股价更新、新的博文、赛事结果，等等。
+
+      if(typeof(EventSource) !== "undefined") {
+          // 是的！支持服务器发送事件！
+          // 一些代码.....
+      } else {
+          // 抱歉！不支持服务器发送事件！
+      }
+      
+             var source = new EventSource("demo_sse.php");
+              source.onmessage = function(event) {
+                  document.getElementById("result").innerHTML += event.data + "<br>";
+              };
+
+          服务器端事件流的语法非常简单。请把 "Content-Type" 报头设置为 "text/event-stream"
+          把报头 "Content-Type" 设置为 "text/event-stream"
+          规定不对页面进行缓存
+          输出要发送的日期（始终以 "data: " 开头）
+          向网页刷新输出数据
+
+
+          onopen	当通往服务器的连接被打开
+          onmessage	当接收到消息
+          onerror	当发生错误
+            -->
 </body>
 
 </html>
