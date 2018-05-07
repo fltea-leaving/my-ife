@@ -1,0 +1,20 @@
+字体
+  颜色 color
+  种类  font-family
+  大小  font-size
+  样式  font-style
+    normal italic oblique
+  粗细  font-weight
+    normal bold  lihger bolder 100-900
+  转换  font-transform
+    none uppercase lowercase captalize full-width
+  装饰  font-decoration
+    none underline overline line-through 
+    缩写 text-decoration-line text-decoration-style text-decoration-color
+      text-decoration-style solid double dotted dashed wavy 
+  阴影 text-shadow 
+     x y r color;
+  对齐 text-align 
+    left right center justify
+  行高 line-height
+  字母和字间距  letter-spacing word-spacing

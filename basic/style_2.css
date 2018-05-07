@@ -1,0 +1,13 @@
+html,body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  float:left;
+  padding: 40px;
+  margin-right: 20px;
+  height: 100%;
+  color: #fff;
+  background: blue;
+}
