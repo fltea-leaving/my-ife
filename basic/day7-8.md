@@ -68,8 +68,26 @@
   ```
 # 布局
   flexbox
-
+    display: flex;
+    flex-firection: column;
+    flex: flex-grow flex-shrink flex-basis;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    order: 1;
 
 
 # 浮动
-  float
+  float 被设置了float的元素会脱离文档流。
+    破坏性/包裹性/去空格
+  clear
+
+# 方法
+双inline-block
+双float
+float+margin-left
+absolute+margin-left
+float+BFC
+flex
+grid
+
